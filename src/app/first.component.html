@@ -2,11 +2,8 @@
   <p>
     first works!
   </p>
-  <!-- <div style="height: 60px;"> -->
-    <app-common route="first" #common></app-common>
-  <!-- </div> -->
-  
-  <!-- <button (click)="something = attr.attr.first.nativeElement.offsetTop"></button> -->
-  <!-- {{attr.attr?.first.nativeElement.offsetHeight}} -->
-  {{something}} 
+  <div fxLayout="row">
+    <div style="background-color:red;" fxFlex>Hello</div>
+    <app-common fxFlex></app-common>
+  </div>
 </div>

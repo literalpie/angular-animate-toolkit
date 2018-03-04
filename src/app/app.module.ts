@@ -9,19 +9,22 @@ import { FirstComponent } from './first.component';
 import { SecondComponent } from './second.component';
 import { CommonComponent } from './common.component';
 import { AnimationLocationsService } from './animation-locations.service';
-
+import { AnimateBetweenRoutesDirective } from './animate-between-routes.directive';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
     SecondComponent,
-    CommonComponent
+    CommonComponent,
+    AnimateBetweenRoutesDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FlexLayoutModule,
   ],
   providers: [AnimationLocationsService],
   bootstrap: [AppComponent]
