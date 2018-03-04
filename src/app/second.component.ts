@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-second',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./second.component.css']
 })
 export class SecondComponent implements OnInit {
+  @ViewChild('common') attr;
+  something;
 
   constructor() { }
 

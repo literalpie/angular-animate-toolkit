@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 
@@ -7,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FirstComponent } from './first.component';
 import { SecondComponent } from './second.component';
 import { CommonComponent } from './common.component';
+import { AnimationLocationsService } from './animation-locations.service';
 
 
 @NgModule({
@@ -19,8 +21,9 @@ import { CommonComponent } from './common.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [AnimationLocationsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

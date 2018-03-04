@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+.bordered {
+  border: 2px solid red;
+}
+.bordered-light {
+  border: 1px solid blue;
+}

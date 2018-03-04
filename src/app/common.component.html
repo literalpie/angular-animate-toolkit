@@ -1,5 +1,10 @@
-<p>
-  common works!
-</p>
-<button routerLink="/first">go to first</button>
-<button routerLink="/second">go to second</button>
+<div #button class="bordered-light">
+  <p>
+    common works!
+  </p>
+  <button routerLink="/first">go to first</button>
+  <button routerLink="/second">go to second</button>
+  <!-- {{attr|json}} -->
+  <button (click)="getDisplayData()">get attr</button>  
+  {{route}}
+</div>
