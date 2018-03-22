@@ -11,20 +11,22 @@ export interface ComponentPosition {
 
 @Injectable()
 export class AnimationLocationsService {
-  componentPositions: BehaviorSubject<ComponentPosition[]> = new BehaviorSubject([]);
+  private componentPositions: ComponentPosition[] = [];
+  private nextId = 1;
   constructor() { }
 
-  registerComponentPosition(position: ComponentPosition) {
-    this.componentPositions.next(
-      [...this.componentPositions.value
-        .filter(pos => pos.id !== position.id),
+  registerElementPosition(position: ComponentPosition) {
+      this.componentPositions = [
+        ...this.componentPositions.filter(pos => pos.id !== position.id),
         position
-      ]
-    );
+      ];
   }
 
   getComponentPosition(componentId: string) {
-    return this.componentPositions.value.find(pos => pos.id === componentId);
+    return this.componentPositions.find(pos => pos.id === componentId);
   }
 
+  getNextId(): string {
+    return 'auto-generated-' + this.nextId++;
+  }
 }

@@ -1,1 +1,5 @@
-<router-outlet></router-outlet>
+<div [@animateRoutes]="routeName$ | async" style="position: relative">
+  <router-outlet></router-outlet>
+</div>
+
+<app-animate-positions></app-animate-positions>

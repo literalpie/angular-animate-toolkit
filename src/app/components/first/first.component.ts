@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChildren, OnDestroy, ViewChild } from '@angular/core';
 import { QueryList } from '@angular/core';
-import { CommonComponent } from './common.component';
 
 @Component({
   selector: 'app-first',
